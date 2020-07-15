@@ -20,12 +20,12 @@ const CardSchema = new Schema({
 // "prestart": "yarn seed",
 // to package.json to have it start at the right time during launch
 
-function seedCards() {
+function seedHtmlCards() {
 
 const data = [
-    { q: "Flibber jib flip flap?", a: "wokka wokka" },
-    { q: "Hubba dubba shoop shoop?", a: "flingelheimer Morgendorf"},
-    { q: "Greeeeee greeble grupp?", a: "Snooger flop flop hurrah"},
+    { title: "wooloof", q: "Flibber jib flip flap?", a: "wokka wokka" },
+    { title: "hub", q: "Hubba dubba shoop shoop?", a: "flingelheimer Morgendorf"},
+    { title: "gree", q: "Greeeeee greeble grupp?", a: "Snooger flop flop hurrah"},
 ]
 
 for(let i = 0; i < data.length; i++) {
@@ -36,6 +36,22 @@ for(let i = 0; i < data.length; i++) {
 
 }
 
+function seedCssCards() {
+
+  const data = [
+    { title: "", q: "", a: ""},
+    { title: "", q: "", a: ""},
+    { title: "", q: "", a: ""},
+  ]
+
+
+  for(let i = 0; i < data.length; i++) {
+    this.db.cssCards.insert(data[i]);
+}
+
+}
+
 module.exports = mongoose.model("Card", CardSchema);
 
-seedCards();
+seedHtmlCards();
+seedCssCards();
