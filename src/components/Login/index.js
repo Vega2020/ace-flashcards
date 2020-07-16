@@ -32,7 +32,7 @@ const Login = ({ history }) => {
 
   return (
     <div className="bgImg text-center">
-      <img src={logo} className="mt-5 mb-5 logoBorder text-center" width="300px" />
+      <img src={logo} className="mt-5 mb-5 logoBorder text-center logo" width="300px" />
     <div className="bg-dark ml-5 mr-5 rounded p-2 formContainer">
       <Form className="text-center" onSubmit={handleLogin} ><Form.Group controlId="formBasicEmail">
     <h3 className="text-center text-light">Email address</h3>
@@ -50,6 +50,7 @@ const Login = ({ history }) => {
     Submit
     </Button>{' '}
     </Form>
+    Not a member? <Link to="/signup">Sign up</Link>
     </div>
     </div>
 );

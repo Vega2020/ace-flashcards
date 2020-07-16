@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
-import { withRouter } from "react-router";
+import { withRouter, Redirect } from "react-router";
+import { Link } from 'react-router-dom';
 import app from "../../firebase";
-import { Button, Form, Container } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import logo from "../../Images/aceLogo.png";
-import "./style.css"
 
 
 const SignUp = ({ history }) => {
@@ -25,7 +25,7 @@ const SignUp = ({ history }) => {
 
   return (
     <div className="bgImg text-center">
-      <img src={logo} className="mt-5 mb-5 logoBorder text-center" width="300px" />
+      <img src={logo} className="mt-5 mb-5 logoBorder text-center logo" width="300px" />
       {/* <h1>Sign up</h1>
       <form */}
       <div className="bg-dark ml-5 mr-5 rounded p-2 formContainer">
@@ -43,8 +43,9 @@ const SignUp = ({ history }) => {
     <input className="rounded" size="50" name="password" type="password" placeholder="Password" />
     </Form.Group>
 
-        <Button type="submit">Sign Up</Button>{' '}
+        <Button variant="secondary" type="submit">Sign Up</Button>{' '}
       </Form>
+      Already a member? <Link to="/Login">Login</Link>
     </div>
     </div>
   );
