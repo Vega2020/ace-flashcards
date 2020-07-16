@@ -100,4 +100,109 @@ module.exports = [
     q: "Why do we use the required attribute in HTML?", 
     a: "The required attribute is used in HTML to make the field mandatory. It forces the user to fill that particular field to submit the form. If the field is input then it will throw a default HTML error. <input type='email' name = 'user_email' required />" 
   },
+  { 
+    tags: ["css"], 
+    q: "What does CSS stand for?", 
+    a: "Cascading Style Sheet />" 
+  },
+  { 
+    tags: ["css"], 
+    q: "What is CSS?", 
+    a: "CSS outlines the style of an HTML webpage. It is a language by which we can set the behavior of an HTML webpage. It describes how the HTML content will be shown on screen. CSS controls the layout of several HTML web pages." 
+  },
+  { 
+    tags: ["css"], 
+    q: "Name all the modules which are used in the current version of CSS?", 
+    a: "There are several modules in CSS as stated below: Selectors, Box Model, Backgrounds and Borders, Text Effects, 2D/3D Transformations, Animations, Multiple Column Layout, User Interface." 
+  },
+  { 
+    tags: ["css"], 
+    q: "Cite different types of CSS.", 
+    a: "There are three types of CSS as mentioned below: External: These are written in separate files. Internal: These are cited at the top of the web page code document. Inline: These are written right next to the text." 
+  },
+  { 
+    tags: ["css"], 
+    q: "Why is the external style sheet useful? ", 
+    a: "External style sheet is very useful as we write all the styling codes in a single file and it can be used anywhere by just referring to the link of that external style sheet file. So, if we do any changes in that external file, then the changes can also be observed on the webpage. Thus we can say that it is very useful and it makes your work easy while working on larger files." 
+  },
+  { 
+    tags: ["css"], 
+    q: "How to use CSS selector?", 
+    a: "By using the CSS selector, we can choose the content which we want to style so that we can say that it is a bridge between the style sheet and the HTML files. The syntax for CSS selector is “select” HTML elements created on their id, class, type, etc. " 
+  },
+  { 
+    tags: ["css"], 
+    q: "Explain the term Responsive web design.", 
+    a: "It is a method in which we design and develop a web page according to the user activities and conditions which are based on various components like the size of the screen, portability of the web page on the different devices, etc. It is done by using different flexible layouts and grids." 
+  },
+  { 
+    tags: ["css"], 
+    q: "What is CSS specificity?", 
+    a: "CSS specificity is a score or rank that decides which style declaration has to be used to an element. (*) this universal selector has low specificity while ID selectors have high specificity.There are four categories in CSS which authorize the specificity level of the selector. Inline style, IDs, Classes, Attributes, and pseudo-classes. Elements and pseudo-elements." 
+  },
+  { 
+    tags: ["css"], 
+    q: "How do we make a rounded corner by using CSS?", 
+    a: "We can make a rounded corner by using the property “border-radius”. We can apply this property to any element." 
+  },
+  { 
+    tags: ["css"], 
+    q: "What are gradients in CSS?", 
+    a: "It is a property of CSS which allows you to display a smooth transformation between two or more than two specified colors. There are two types of gradients that are present in CSS. They are: Linear Gradient & Radial Gradient" 
+  },
+  { 
+    tags: ["css"], 
+    q: "What is the difference between padding and margin?", 
+    a: "In CSS, the margin is the property by which we can create space around elements. We can even create space to the exterior defined borders & padding is the property by which we can generate space around an element’s content as well as inside any known border." 
+  },
+  { 
+    tags: ["css"], 
+    q: "Name the margin properties & the defined values in CSS.", 
+    a: "margin-top, margin-right, margin-bottom, Margin-left, Auto – Using this property browser calculates the margin. Length – It sets the margin values in px,pt,cm etc. % – It sets the width % of the element. Inherit – By this property we can inherit the margin property from the parent element." 
+  },
+  { 
+    tags: ["css"], 
+    q: "Name the padding properties in CSS.", 
+    a: "Padding-top Padding-right Padding-bottom Padding-left" 
+  },
+  { 
+    tags: ["css"], 
+    q: "What is the use of the Box Model in CSS?", 
+    a: "In CSS, the box model is a box that binds all the HTML elements and it includes features like margins, border, padding, and the actual content. By using a box model we will get the authority to add the borders all around the elements and we can also define the space between the elements." 
+  },
+  { 
+    tags: ["css"], 
+    q: "How can we add icons to the web page", 
+    a: "We can add icons to the HTML webpage by using an icon library like font-awesome. We have to add the name of the given icon class to any inline HTML element. (<i> or <span>) . Icons in the icon libraries are scalable vectors that can be customized with CSS." 
+  },
+  { 
+    tags: ["css"], 
+    q: "What is a CSS pseudo-class?", 
+    a: "This class can be used by styling an element when a user snooped over it and also it can style an HTML element when it gets the focus. selector:pseudo-class {property:value;}" 
+  },
+  { 
+    tags: ["css"], 
+    q: "Explain the concept of pseudo-elements in CSS.", 
+    a: "It is a feature of CSS which is used to style the given parts of an element.For Example, we can style the first letter or line of an HTML element.selector::pseudo-element {property:value;}" 
+  },
+  { 
+    tags: ["css"], 
+    q: "What is CSS opacity?", 
+    a: "It is the property that elaborates on the transparency of an element. By this property, we can transparent the image that can take the values from 0.0-1.0. If the value is lower, then the image is more transparent. IE8 and earlier versions of the browser can take the values from 0-100. img { opacity: 0.6;filter: alpha(opacity=60); /* For IE8 and earlier */}" 
+  },
+  { 
+    tags: ["css"], 
+    q: "Write all the position states used in CSS.", 
+    a: "Static(default), Relative, Fixed, Absolute" 
+  },
+  { 
+    tags: ["css"], 
+    q: "What are the differences between relative and absolute in CSS?", 
+    a: "The main difference between relative and absolute is that “relative” is used for the same tag in CSS and it means that if we write the left:10px then the padding will shift to 10px in the left while absolute is totally relative to the non-static parent. It means, if we write left:10px then the result will be 10px far from the left edge of the parent element." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What does CSS stand for?", 
+    a: "Cascading Style Sheet />" 
+  },
 ];
