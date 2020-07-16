@@ -302,6 +302,106 @@ module.exports = [
   },
   { 
     tags: ["jquery"], 
+    q: "What is jQuery?", 
+    a: "jQuery is a feature-rich JavaScript library that makes HTML document traversal and manipulation, event handling, animation, and Ajax much simpler and faster. jQuery has an easy-to-use API that works across many browsers. UI related functions can be written with minimal lines of code using jQuery." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What is the difference between JavaScript and jQuery?", 
+    a: "JavaScript is an interpreted programming language whereas jQuery is a library with APIs built for JavaScript. jQuery simplifies the use of the JavaScript language." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What are the effects methods used in jQuery?", 
+    a: "jQuery enables us to add effects on a web page. jQuery effects can be categorized into fading, sliding, hiding/showing and animation effects. jQuery provides many methods for effects on a web page. These are the effects methods used in jQuery: show() - It displays or shows the selected elements. hide() - It hides the matched or selected elements.toggle() - It shows or hides the matched elements. In other words, it toggles between the hide() and show() methods.fadeIn() - It shows the matched elements by fading it to opaque. In other words, it fades in the selected elements. fadeOut() - It shows the matched elements by fading it to transparent. In other words, it fades out the selected elements." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What is jQuery Ajax?", 
+    a: "AJAX is an acronym standing for Asynchronous JavaScript and XML and this technology helps us to load data and exchange data with the server without a browser page refresh. JQuery is a great tool that provides a rich set of AJAX methods to develop next-generation web applications." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What does ajax() method do?", 
+    a: "This method sends an asynchronous http request to the server." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What does the ajax method load() do?", 
+    a: "The load() method sends an http request to load the html or text content from the server and adds them to the DOM element(s)." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What are the jQuery Ajax Events?", 
+    a: "The jQuery library also includes events that will be fired based on the state of the Ajax request, these are called Ajax events." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What does the jQuery Ajax event method ajaxComplete() do?", 
+    a: "Whenever an Ajax request completes, jQuery triggers the ajaxComplete event. Any and all handlers that have been registered with the .ajaxComplete() method are executed at this time." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What does the jQuery ajax event method ajaxStart() do?", 
+    a: "Whenever an Ajax request is about to be sent, jQuery checks whether there are any other outstanding Ajax requests. If none are in progress, jQuery triggers the ajaxStart event. Any and all handlers that have been registered with the .ajaxStart() method are executed at this time." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What are Events in jQuery?", 
+    a: "Responding to user actions on a webpage is called events. jQuery provides simple methods for attaching event handlers to selections. When an event occurs, the provided function is executed." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What are the categories in jquery Events?", 
+    a: "The common DOM events are as follows: Form, Keyboard, Mouse, Browser, Document, Loading" 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What is the use of css() method in JQuery?", 
+    a: "The jQuery CSS() method is used to get (return)or set style properties or values for selected elements. It facilitates you to get one or more style properties." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What is the difference between find and children methods?", 
+    a: "Both the methods are used to filter the child of the matched elements. Find method is used to find all levels down the DOM tree but children method searches only a single level down the DOM tree." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What is the difference between the ID selector and class selector in jQuery?", 
+    a: "ID selector and class selector are the same as they are in CSS. ID selector uses ID while the class selector uses a class to select elements. You use an ID selector to select just one element. If you want to select a group of elements, having the same CSS class, you can use the class selector." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What is the difference between onload() and document.ready() methods?", 
+    a: "Body.Onload() event will be called only after the DOM and associated resources like images get loaded, but jQuery's document.ready() event will be called once the DOM is loaded and it does not wait for the resources such as images to be loaded." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What is jQuery connect?", 
+    a: "A ‘ jQuery connect’ is a plug-in used to connect or bind a function with another function. Connect is used to execute a function whenever a function from another object or plug-in is executed." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: " Is jQuery required for bootstrap?", 
+    a: "Bootstrap uses jQuery for JavaScript plugins (like models, tooltips, etc). However, if you just use the CSS part of Bootstrap, you don't need jQuery." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "What is the difference between jquery.min.js and jquery.js?", 
+    a: "jquery.min.js is a compressed version of jquery.js(whitespaces and comments are removed, shorter variable names are used and so on) in order to preserve bandwidth. In terms of functionality, they are absolutely the same. It is recommended to use this compressed version in the production environment. The efficiency of web page increases when the minimized version of jQuery is used." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "Is it possible that jQuery HTML works for both HTML and XML documents?", 
+    a: "No, jQuery HTML only works for HTML documents. It doesn't work for XML documents." 
+  },
+  { 
+    tags: ["jquery"], 
+    q: "Explain the difference between $(this) and this in jQuery?", 
+    a: "$() is the jQuery constructor function, whereas this is a reference to the DOM element. To use jQuery methods, we use $(this)." 
+  },
+  { 
+    tags: ["node"], 
     q: "What does CSS stand for?", 
     a: "Cascading Style Sheet />" 
   },
