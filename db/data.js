@@ -1,10 +1,18 @@
 module.exports = [
   {
-    title: "html acronym",
+    tags: ["html", "acronym"],
     q: "What does HTML stand for?",
     a: "Hyper Text Markup Language.",
   },
   // copy the format above to enter more questions.
-  { title: "", q: "", a: "" },
-  { title: "", q: "", a: "" },
+  { 
+    tags: [], 
+    q: "", 
+    a: "" 
+  },
+  { 
+    tags: [], 
+    q: "", 
+    a: "" 
+  },
 ];
