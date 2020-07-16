@@ -1,11 +1,17 @@
 .bgImg {
     background-image: url(../../Images/buildingImg.png);
     height: 100vh;
+    background-position: center;
+    background-size: 100%;
 }
 .formContainer {
     font-family: kefa;
     border: white 1px solid;
+    opacity: 90%;
 }
 .logoBorder {
     border: white 1px solid;
+}
+.logo {
+    opacity: 90%;
 }
