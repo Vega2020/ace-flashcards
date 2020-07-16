@@ -16,9 +16,10 @@
     transform-style: preserve-3d;
   }
   
-  /* This controls the flip function. The :hover makes it happen when hovered over, and the transforms control what it does. rotateY controls the flip, translate controls the landing target.*/
+  /* This controls the flip function. You can use .flip-card:hover to make it flip when hovered over, and the transforms control what it does. rotateY controls the flip, translate controls the landing target.*/
   .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg) translate(-100%, 0px);
+    /* transform: rotateY(180deg) translate(-100%, 0px); */
+    transform: rotateY(180deg);
   }
   
   /* Position the front and back side */
