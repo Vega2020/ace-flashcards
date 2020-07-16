@@ -3,8 +3,7 @@ const Schema = mongoose.Schema;
 
 // create a mongoose schema for our card
 const CardSchema = new Schema({
-  title: String,
-  // tags: [],
+  tags: [],
   q: String,
   a: String,
 });
