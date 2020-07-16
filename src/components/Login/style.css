@@ -2,3 +2,10 @@
     background-image: url(../../Images/buildingImg.png);
     height: 100vh;
 }
+.formContainer {
+    font-family: kefa;
+    border: white 1px solid;
+}
+.logoBorder {
+    border: white 1px solid;
+}

@@ -18,10 +18,10 @@ const Login = ({ history }) => {
         history.push("/");
       } catch (error) {
         alert(error);
-      }
+    }
     },
-    [history]
-  );
+  [history]
+);
 
   const { currentUser } = useContext(AuthContext);
 
@@ -31,43 +31,26 @@ const Login = ({ history }) => {
 
   return (
     <div className="bgImg text-center">
-    <img src={logo} className="mt-5 mb-5" width="300px" />
-    <div className="bg-secondary ml-5 mr-5 rounded p-2">
-    {/* New Form Component */}
-    <Form className="text-center" onSubmit={handleLogin} >
-  <Form.Group controlId="formBasicEmail">
-    <h3 className="text-center">Email address</h3>
+      <img src={logo} className="mt-5 mb-5 logoBorder" width="300px" />
+    <div className="bg-dark ml-5 mr-5 rounded p-2 formContainer">
+      <Form className="text-center" onSubmit={handleLogin} ><Form.Group controlId="formBasicEmail">
+    <h3 className="text-center text-light">Email address</h3>
     <input className="rounded" size="50" name="email" type="email" placeholder="Enter email" />
     <Form.Text className="text-muted">
       We'll never share your email with anyone else.
     </Form.Text>
-  </Form.Group>
-  <Form.Group controlId="formBasicPassword">
-    <h3 className="text-center">Password</h3>
+    </Form.Group>
+    <Form.Group controlId="formBasicPassword">
+    <h3 className="text-center text-light">Password</h3>
     <input className="rounded" size="50" name="password" type="password" placeholder="Password" />
-  </Form.Group>
-  <Button className="p-0" variant="dark" type="submit">
+    </Form.Group>
+    <Button className="p-0" variant="secondary" type="submit">
     Submit
-  </Button>{' '}
-</Form>
-</div>
-    {/* OLD but WORKING Form Component.. */}
-   {/* <div>
-      <h1>Log in</h1>
-      <form onSubmit={handleLogin}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <Button className="p-0" variant="secondary">Log In</Button>{' '}
-      </form>
-    </div> */}
+    </Button>{' '}
+    </Form>
     </div>
-  );
+    </div>
+);
 };
 
 export default withRouter(Login);
