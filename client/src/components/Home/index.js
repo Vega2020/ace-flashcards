@@ -1,6 +1,6 @@
 import React from "react";
 import app from "../../firebase";
-import CardRender from "../cardRender";
+import CardFrame from "../cardFrame";
 
 const Home = () => {
     return (
@@ -8,7 +8,7 @@ const Home = () => {
          <h1>Home</h1>
          <button onClick={() => app.auth().signOut()}>Sign out</button>
         <div>
-            <CardRender />
+            <CardFrame />
         </div>
         </>
     );

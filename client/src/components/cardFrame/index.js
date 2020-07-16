@@ -2,6 +2,7 @@ import React, {useState} from "react";
 //import "./style.css";
 
 import CardRender from "../cardRender";
+import CardCategory from "../cardCategory";
 
 const exampleCards = [
     {
@@ -16,12 +17,45 @@ const exampleCards = [
       }
 ]
 
+const exampleCategories = [
+  {
+    name: "HTML",
+    cards:[
+      {
+          title: "html acronym",
+          q: "What does HTML stand for?",
+          a: "Hyper Text Markup Language",
+        },
+        {
+          title: "css acronym",
+          q: "What does CSS stand for?",
+          a: "Cascading Style Sheet",
+        }
+  ]
+  },
+  {
+    name: "Broken",
+    cards:[
+      {
+          title: "html acronym",
+          q: "BROKE",
+          a: "BRAKEN",
+        },
+        {
+          title: "css acronym",
+          q: "BREAKED",
+          a: "BRUNK",
+        }
+  ]
+  }
+]
+
 
 
 
 function CardFrame(props)
 {
-  const [card, setCard] = useState(0);
+  const [card, setCard] = useState(-1);
   const cardMax = exampleCards.length - 1;
   
   // useEffect(() =>{
@@ -45,9 +79,27 @@ function CardFrame(props)
     )
 }
 else{
-console.log("It's the end!");
+  // Render the card picking menu here.
+
+  return(
+    <>
+    <div>
+    {exampleCategories.map(category => (
+      <CardCategory
+        name={category.name}
+        startDeck={startDeck}
+      />
+      ))}
+      </div>
+      </>
+  );
 }
-return(null);
+
+//This should get passed to and called by the cardCategories component, and should bring up a deck for use.
+function startDeck(deckName){
+  console.log("Starting a deck:", deckName);
+  setCard(0);
+}
 }
 
 
