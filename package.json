@@ -1,39 +1,30 @@
 {
-  "name": "ace-flashcards",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ace_test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "bootstrap": "^4.5.0",
-    "firebase": "^7.16.0",
-    "react": "^16.13.1",
-    "react-bootstrap": "^1.2.2",
-    "react-dom": "^16.13.1",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.24",
+    "morgan": "^1.10.0",
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "dev:server": "nodemon --ignore client/",
+    "dev:client": "yarn client",
+    "client": "cd client && npm start",
+    "install": "cd client && npm i",
+    "build": "cd client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node db/seed.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "author": "",
+  "license": "ISC"
 }
