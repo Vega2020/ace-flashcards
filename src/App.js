@@ -7,6 +7,8 @@ import SignUp from "./SignUp";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
 
+import CardFrame from "./components/cardFrame/cardFrame.js"
+
 const App = () => {
   return (
     <AuthProvider>
@@ -17,6 +19,7 @@ const App = () => {
           <Route exact path="/signup" component={SignUp} />
         </div>
       </Router>
+        <CardFrame />
     </AuthProvider>
   );
 };
