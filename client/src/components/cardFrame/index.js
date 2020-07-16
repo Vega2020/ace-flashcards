@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 //import "./style.css";
 
 import CardRender from "../cardRender";
@@ -29,7 +29,7 @@ function CardFrame(props)
   //   //Do the changes you need.
   // })
 
-  if ( card <= cardMax){
+  if ( card <= cardMax && card >= 0){
     return(
         <div>
         <div>

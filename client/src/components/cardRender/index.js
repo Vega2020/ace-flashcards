@@ -9,15 +9,10 @@ const cardRender = (props) => {
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <h1>{props.front}</h1>
-            <div>
-        <button onClick={() => console.log("Flippy")}>Prev</button>
-        </div>
+            <p className="instruction">Click and Hold for Answer</p>
           </div>
           <div className="flip-card-back">
             <h1>{props.back}</h1>
-            <div>
-        <button onClick={() => console.log("Flippy")}>Prev</button>
-        </div>
           </div>
         </div>
       </div>

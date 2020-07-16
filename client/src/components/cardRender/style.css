@@ -17,7 +17,7 @@
   }
   
   /* This controls the flip function. You can use .flip-card:hover to make it flip when hovered over, and the transforms control what it does. rotateY controls the flip, translate controls the landing target.*/
-  .flip-card:hover .flip-card-inner {
+  .flip-card:active .flip-card-inner {
     /* transform: rotateY(180deg) translate(-100%, 0px); */
     transform: rotateY(180deg);
   }
@@ -42,4 +42,9 @@
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
+  }
+
+  /* For adding a class */
+  .instruction{
+      font-size: 8px;
   }
