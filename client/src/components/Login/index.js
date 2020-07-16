@@ -43,7 +43,7 @@ const Login = ({ history }) => {
     </Form.Group>
     <Form.Group controlId="formBasicPassword">
     <h3 className="text-center text-light">Password</h3>
-    <input className="rounded" name="password" type="password" placeholder="Password" />
+    <input className="rounded formEntry" name="password" type="password" placeholder="Password" />
     </Form.Group>
     
     <Button className="p-0" variant="secondary" type="submit">
