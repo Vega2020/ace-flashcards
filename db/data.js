@@ -202,6 +202,106 @@ module.exports = [
   },
   { 
     tags: ["Javascript"], 
+    q: "What is JavaScript?", 
+    a: "JavaScript is a lightweight, interpreted programming language with object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages. The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What are the data types supported by JavaScript?", 
+    a: "The data types supported by JavaScript are: Undefined, Null, Boolean, String, Symbol, Number, Object" 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What are the features of JavaScript", 
+    a: "Following are the features of JavaScript: It is a lightweight, interpreted programming language. It is designed for creating network-centric applications. It is complementary to and integrated with Java. It is an open and cross-platform scripting language." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "Is JavaScript a case-sensitive language?", 
+    a: "Yes, JavaScript is a case sensitive language.  The language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What are the advantages of JavaScript?", 
+    a: "Following are the advantages of using JavaScript −Less server interaction − You can validate user input before sending the page off to the server. This saves server traffic, which means less load on your server.Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to enter something.Increased interactivity − You can create interfaces that react when the user hovers over them with a mouse or activates them via the keyboard.Richer interfaces − You can use JavaScript to include such items as drag-and-drop components and sliders to give a Rich Interface to your site visitors." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "Can you assign an anonymous function to a variable and pass it as an argument to another function?", 
+    a: "Yes! An anonymous function can be assigned to a variable. It can also be passed as an argument to another function." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What are the scopes of a variable in JavaScript?", 
+    a: "The scope of a variable is the region of your program in which it is defined. JavaScript variable will have only two scopes. • Global Variables − A global variable has global scope which means it is visible everywhere in your JavaScript code. • Local Variables − A local variable will be visible only within a function where it is defined. Function parameters are always local to that function." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What is the purpose of ‘This’ operator in JavaScript?", 
+    a: "The JavaScript this keyword refers to the object it belongs to. This has different values depending on where it is used. In a method, this refers to the owner object and in a function, this refers to the global object." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What is Callback?", 
+    a: "A callback is a plain JavaScript function passed to some method as an argument or option. It is a function that is to be executed after another function has finished executing, hence the name ‘call back‘. In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What is Closure? Give an example.", 
+    a: "Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner scope. It gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created. To use a closure, simply define a function inside another function and expose it." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What are the variable naming conventions in JavaScript?", 
+    a: "The following rules are to be followed while naming variables in JavaScript: You should not use any of the JavaScript reserved keyword as variable name. For example, break or boolean variable names are not valid. JavaScript variable names should not start with a numeral (0-9). They must begin with a letter or the underscore character. For example, 123name is an invalid variable name but _123name or name123 is a valid one. JavaScript variable names are case sensitive. For example, Test and test are two different variables." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "How does TypeOf Operator work?", 
+    a: "The typeof operator is used to get the data type of its operand. The operand can be either a literal or a data structure such as a variable, a function, or an object. It is a unary operator that is placed before its single operand, which can be of any type. Its value is a string indicating the data type of the operand." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "How to read a cookie using JavaScript?", 
+    a: "Reading a cookie is just as simple as writing one, because the value of the document.cookie object is the cookie. So you can use this string whenever you want to access the cookie. The document.cookie string will keep a list of name = value pairs separated by semicolons, where name is the name of a cookie and value is its string value. You can use strings’ split() function to break the string into key and values." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "How to delete a cookie using JavaScript?", 
+    a: "If you want to delete a cookie so that subsequent attempts to read the cookie return nothing, you just need to set the expiration date to a time in the past. You should define the cookie path to ensure that you delete the right cookie. Some browsers will not let you delete a cookie if you don’t specify the path." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What is the difference between Attributes and Property?", 
+    a: "Attributes-  provide more details on an element like id, type, value etc. Property-  is the value assigned to the property like type=”text”, value=’Name’ etc." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "In how many ways a JavaScript code can be involved in an HTML file?", 
+    a: "There are 3 different ways in which a JavaScript code can be involved in an HTML file: Inline, Internal, External. An inline function is a JavaScript function, which is assigned to a variable created at runtime. You can differentiate between Inline Functions and Anonymous since an inline function is assigned to a variable and can be easily reused. When you need a JavaScript for a function, you can either have the script integrated in the page you are working on, or you can have it placed in a separate file that you call, when needed. This is the difference between an internal script and an external script." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What are the ways to define a variable in JavaScript?", 
+    a: "The three possible ways of defining a variable in JavaScript are: Var – The JavaScript variables statement is used to declare a variable and, optionally, we can initialize the value of that variable. Example: var a =10; Variable declarations are processed before the execution of the code.Const – The idea of const functions is not allow them to modify the object on which they are called. When a function is declared as const, it can be called on any type of object. Let – It is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the block it’s defined in." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What is a Typed language?", 
+    a: "Typed Language is in which the values are associated with values and not with variables. It is of two types: Dynamically: in this, the variable can hold multiple types; like in JS a variable can take number, chars. Statically: in this, the variable can hold only one type, like in Java a variable declared of string can take only set of characters and nothing else." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What is the difference between Local storage & Session storage?", 
+    a: "Local Storage – The data is not sent back to the server for every HTTP request (HTML, images, JavaScript, CSS, etc) – reducing the amount of traffic between client and server. It will stay until it is manually cleared through settings or program. Session Storage – It is similar to local storage; the only difference is while data stored in local storage has no expiration time, data stored in session storage gets cleared when the page session ends. Session Storage will leave when the browser is closed." 
+  },
+  { 
+    tags: ["Javascript"], 
+    q: "What is the difference between the operators ‘==‘ & ‘===‘", 
+    a: "The main difference between “==” and “===” operator is that formerly compares variable by making type correction e.g. if you compare a number with a string with numeric literal, == allows that, but === doesn’t allow that, because it not only checks the value but also type of two variable, if two variables are not of the same type “===” return false, while “==” return true." 
+  },
+  { 
+    tags: ["jQuery"], 
     q: "What does CSS stand for?", 
     a: "Cascading Style Sheet />" 
   },
