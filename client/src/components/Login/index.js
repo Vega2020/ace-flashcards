@@ -33,17 +33,17 @@ const Login = ({ history }) => {
   return (
     <div className="bgImg text-center">
       <img src={logo} className="mt-5 mb-5 logoBorder text-center logo" width="300px" />
-    <div className="bg-dark ml-5 mr-5 rounded p-2 formContainer">
+    <div className="bg-dark rounded p-3 formContainer">
       <Form className="text-center" onSubmit={handleLogin} ><Form.Group controlId="formBasicEmail">
     <h3 className="text-center text-light">Email address</h3>
-    <input className="rounded" size="50" name="email" type="email" placeholder="Enter email" />
+    <input className="rounded" name="email" type="email" placeholder="Enter email" />
     <Form.Text className="text-muted">
       We'll never share your email with anyone else.
     </Form.Text>
     </Form.Group>
     <Form.Group controlId="formBasicPassword">
     <h3 className="text-center text-light">Password</h3>
-    <input className="rounded" size="50" name="password" type="password" placeholder="Password" />
+    <input className="rounded formEntry" name="password" type="password" placeholder="Password" />
     </Form.Group>
     
     <Button className="p-0" variant="secondary" type="submit">
