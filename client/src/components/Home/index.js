@@ -1,25 +1,28 @@
 import React from "react";
 import app from "../../firebase";
-<<<<<<< HEAD
-import Cardmaker from "../Cardmaker";
-=======
 import CardFrame from "../cardFrame";
->>>>>>> 1ece44872e1e50702263b5a41cba44c0dd362fe9
+import { Navbar, Form, Button, Nav, FormControl } from "react-bootstrap";
 
 const Home = () => {
-    return (
-        <>
-         <h1>Home</h1>
-         <button onClick={() => app.auth().signOut()}>Sign out</button>
-<<<<<<< HEAD
-        {/* <Cardmaker></Cardmaker> */}
-=======
-        <div>
-            <CardFrame />
-        </div>
->>>>>>> 1ece44872e1e50702263b5a41cba44c0dd362fe9
-        </>
-    );
+  return (
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="/home">Ace</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/signup">Sign Up</Nav.Link>
+          <Nav.Link href="/quiz">Quiz Me</Nav.Link>
+          <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
+        </Nav>
+        
+      </Navbar>
+      <h1>Home</h1>
+      
+      <div>
+        <CardFrame />
+      </div>
+    </>
+  );
 };
 
 export default Home;
