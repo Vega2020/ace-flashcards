@@ -4,10 +4,11 @@
   "description": "The user can utilize ACE to prepare them for their Web Development interview. They have the ability to create an account & sign into their account. Once logged in, the user will be displayed with different sections of flashcards. The user can then click on which flashcard they want to review which then displays the question on a card that you can flip over for the answer. We also gave the option for the user to take a quiz when they’re ready which combines a randomly selected set of cards from all the flashcards.",
   "main": "server.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "mongoose": "^5.9.24",
-    "morgan": "^1.10.0",
-    "if-env": "^1.0.4"
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
