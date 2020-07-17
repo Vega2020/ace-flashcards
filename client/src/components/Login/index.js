@@ -3,7 +3,7 @@ import { withRouter, Redirect } from "react-router";
 import { Link } from 'react-router-dom';
 import app from "../../firebase.js";
 import { AuthContext } from "../../Auth.js";
-import { Button, Form, Container } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import logo from "../../Images/aceLogo.png";
 import "./style.css"
 
@@ -32,7 +32,7 @@ const Login = ({ history }) => {
 
   return (
     <div className="bgImg text-center">
-      <img src={logo} className="mt-5 mb-5 logoBorder text-center logo" width="300px" />
+      <img src={logo} alt="aceLogo" className="mt-5 mb-5 logoBorder text-center logo" width="300px" />
     <div className="bg-dark rounded p-3 formContainer">
       <Form className="text-center" onSubmit={handleLogin} ><Form.Group controlId="formBasicEmail">
     <h3 className="text-center text-light">Email address</h3>
