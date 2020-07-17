@@ -54,7 +54,7 @@ function CardFrame(props)
     return(
         <div>
         <div>
-        <CardRender front={exampleCardSet[card].q} back={exampleCardSet[card.a]} />
+        <CardRender front={exampleCardSet[card].q} back={exampleCardSet[card].a} />
         </div>
         <div>
         <button onClick={() => setCard(card - 1)}>Prev</button>
