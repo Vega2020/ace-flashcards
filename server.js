@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // TODO - All routes refering to db will break - need to fix
+let db = require('./db/index')
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "./public/index.html"));
