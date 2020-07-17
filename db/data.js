@@ -402,7 +402,202 @@ module.exports = [
   },
   { 
     tags: ["node"], 
-    q: "What does CSS stand for?", 
-    a: "Cascading Style Sheet />" 
+    q: "What is Node.js? What is it used for?", 
+    a: "Node.js is a run-time JavaScript environment built on top of Chrome’s V8 engine. It uses an event-driven, non-blocking I/O model. It is lightweight and so efficient. Node.js has a package ecosystem called npm. Node.js can be used to build different types of applications such as web application, real-time chat application, REST API server etc. However, it is mainly used to build network programs like web servers, similar to PHP, Java, or ASP.NET. Node.js was developed by Ryan Dahl in 2009." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is Event-driven programming?", 
+    a: "Event-driven programming is building our application based on and respond to events. When an event occurs, like click or keypress, we are running a callback function which is registered to the element for that event."
+  },
+  { 
+    tags: ["node"], 
+    q: "What is Event loop in Node.js work? And How does it work?", 
+    a: "The Event loop handles all async callbacks. Node.js (or JavaScript) is a single-threaded, event-driven language. This means that we can attach listeners to events, and when a said event fires, the listener executes the callback we provided.Whenever we are call setTimeout, http.get and fs.readFile, Node.js runs this operations and further continue to run other code without waiting for the output. When the operation is finished, it receives the output and runs our callback function. So all the callback functions are queued in an loop, and will run one-by-one when the response has been received." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is REPL in Node.js?", 
+    a: "REPL means Read-Eval-Print-Loop. It is a virtual environment that comes with Node.js. We can quickly test our JavaScript code in the Node.js REPL environment. To launch the REPL in Node.js, just open the command prompt and type node. It will change the prompt to > in Windows and MAC. Now we can type and run our JavaScript easily. For example, if we type 10 + 20, it will print 30 in the next line." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the difference between Asynchronous and Non-blocking?", 
+    a: "Asynchronous literally means not synchronous. We are making HTTP requests which are asynchronous, means we are not waiting for the server response. We continue with other block and respond to the server response when we received. The term Non-Blocking is widely used with IO. For example non-blocking read/write calls return with whatever they can do and expect caller to execute the call again. Read will wait until it has some data and put calling thread to sleep." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the difference between setImmediate() vs setTimeout()?", 
+    a: "setImmediate() and setTimeout() are similar, but behave in different ways depending on when they are called.setImmediate() is designed to execute a script once the current poll (event loop) phase completes. setTimeout() schedules a script to be run after a minimum threshold in ms has elapsed. The order in which the timers are executed will vary depending on the context in which they are called. If both are called from within the main module, then timing will be bound by the performance of the process." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is package.json? What is it used for?", 
+    a: "This file holds various metadata information about the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies. Some of the fields are: name, name, description, author and dependencies. When someone installs our project through npm, all the dependencies listed will be installed as well. Additionally, if someone runs npm install in the root directory of our project, it will install all the dependencies to ./node_modules directory." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What are some of the most popular modules of Node.js?", 
+    a: "There are many most popular, most starred or most downloaded modules in Node.js. Some of them are: express, async, browserify, socket.io, bower, gulp, grunt, etc" 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the difference between readFile vs createReadStream in Node.js?", 
+    a: "readFile — is for asynchronously reads the entire contents of a file. It will read the file completely into memory before making it available to the User. readFileSync is synchronous version of readFile. createReadStream — It will read the file in chunks of the default size 64 kb which is specified before hand." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the use of Timers is Node.js?", 
+    a: "The Timers module in Node.js contains functions that execute code after a set period of time. Timers do not need to be imported via require(), since all the methods are available globally to emulate the browser JavaScript API. The Node.js API provides several ways of scheduling code to execute at some point after the present moment. The functions below may seem familiar, since they are available in most browsers, but Node.js actually provides its own implementation of these methods.Node.js Timer provides setTimeout(), setImmediate() and setInterval." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the use of DNS module in Node.js?", 
+    a: "dns module which provide underlying system's name resolution and DNS look up facilities. DNS module consists of an asynchronous network wrapper." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the passport in Node.js?", 
+    a: "Passport.js is a simple, unobtrusive Node.js authentication middleware for Node.js. Passport.js can be dropped into any Express.js-based web application. Passport recognizes that each application has unique authentication requirements. Authentication mechanisms, known as strategies, are packaged as individual modules. Applications can choose which strategies to employ, without creating unnecessary dependencies. By default, if authentication fails, Passport will respond with a 401 Unauthorized status, and any additional route handlers will not be invoked. If authentication succeeds, the next handler will be invoked and the req.user property will be set to the authenticated user." 
+  },
+  { 
+    tags: ["node"], 
+    q: "Is Node a single threaded application?", 
+    a: "Yes! Node uses a single threaded model with event looping." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is npm?", 
+    a: "npm stands for Node Package Manager. npm provides following two main functionalities: Online repositories for node.js packages/modules which are searchable on search.nodejs.org. Command line utility to install packages, do version management and dependency management of Node.js packages." 
+  },
+  { 
+    tags: ["node"], 
+    q: "How to check the already installed dependencies which are globally installed using npm?", 
+    a: "Use the following command: C:\Nodejs_WorkSpace>npm ls -g" 
+  },
+  { 
+    tags: ["node"], 
+    q: "Which module is used for file based operations?", 
+    a: "fs module is used for file based operations. var fs = require('fs')" 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the purpose of clearTimeout function? ", 
+    a: "The clearTimeout( t ) global function is used to stop a timer that was previously created with setTimeout(). Here t is the timer returned by setTimeout() function." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the purpose of setInterval function?", 
+    a: "The setInterval(cb, ms) global function is used to run callback cb repeatedly after at least ms milliseconds. The actual delay depends on external factors like OS timer granularity and system load. A timer cannot span more than 24.8 days. This function returns an opaque value that represents the timer which can be used to clear the timer using the function clearInterval(t)." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the purpose of console object?", 
+    a: "console object is used to Used to print information on stdout and stderr." 
+  },
+  { 
+    tags: ["node"], 
+    q: "What is the purpose of process object?", 
+    a: "Process object is used to get information on current process. Provides multiple events related to process activities." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What is React?", 
+    a: "React is a front-end JavaScript library developed by Facebook in 2011. It follows the component based approach which helps in building reusable UI components. It is used for developing complex and interactive web and mobile UI. Even though it was open-sourced only in 2015, it has one of the largest communities supporting it." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What are the features of React? ", 
+    a: "Major features of React are listed below: It uses the virtual DOM instead of the real DOM. It uses server-side rendering. It follows uni-directional data flow or data binding." 
+  },
+  { 
+    tags: ["react"], 
+    q: "List some of the major advantages of React.", 
+    a: "Some of the major advantages of React are: It increases the application’s performance. It can be conveniently used on the client as well as server side. Because of JSX, code’s readability increases. React is easy to integrate with other frameworks like Meteor, Angular, etc. Using React, writing UI test cases become extremely easy." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What are the limitations of React?", 
+    a: "Limitations of React are listed below: React is just a library, not a full-blown framework. Its library is very large and takes time to understand. It can be little difficult for the novice programmers to understand. Coding gets complex as it uses inline templating and JSX" 
+  },
+  { 
+    tags: ["react"], 
+    q: "What is JSX?", 
+    a: "JSX is a shorthand for JavaScript XML. This is a type of file used by React which utilizes the expressiveness of JavaScript along with HTML like template syntax. This makes the HTML file really easy to understand. This file makes applications robust and boosts its performance." 
+  },
+  { 
+    tags: ["react"], 
+    q: "Why can’t browsers read JSX?", 
+    a: "Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What do you understand from “In React, everything is a component.”", 
+    a: "Components are the building blocks of a React application’s UI. These components split up the entire UI into small independent and reusable pieces. Then it renders each of these components independent of each other without affecting the rest of the UI." 
+  },
+  { 
+    tags: ["react"], 
+    q: "Explain the purpose of render() in React.", 
+    a: "Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as <form>, <group>,<div> etc. This function must be kept pure i.e., it must return the same result each time it is invoked." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What is Props?", 
+    a: "Props is the shorthand for Properties in React. They are read-only components which must be kept pure i.e. immutable. They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What is a state in React and how is it used?", 
+    a: "States are the heart of React components. States are the source of data and must be kept as simple as possible. Basically, states are the objects which determine components rendering and behavior. They are mutable unlike the props and create dynamic and interactive components. They are accessed via this.state()." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What are the different phases of React component’s lifecycle?", 
+    a: "There are three different phases of React component’s lifecycle: Initial Rendering Phase: This is the phase when the component is about to start its life journey and make its way to the DOM. Updating Phase: Once the component gets added to the DOM, it can potentially update and re-render only when a prop or state change occurs. That happens only in this phase. Unmounting Phase: This is the final phase of a component’s life cycle in which the component is destroyed and removed from the DOM." 
+  },
+  { 
+    tags: ["react"], 
+    q: "Explain the lifecycle methods of React components in detail.", 
+    a: "Some of the most important lifecycle methods are: componentWillMount() – Executed just before rendering takes place both on the client as well as server-side. componentDidMount() – Executed on the client side only after the first render. componentWillReceiveProps() – Invoked as soon as the props are received from the parent class and before another render is called. shouldComponentUpdate() – Returns true or false value based on certain conditions. If you want your component to update, return true else return false. By default, it returns false. componentWillUpdate() – Called just before rendering takes place in the DOM. componentDidUpdate() – Called immediately after rendering takes place. hcomponentWillUnmount() – Called after the component is unmounted from the DOM. It is used to clear up the memory spaces." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What is an event in React?", 
+    a: "In React, events are the triggered reactions to specific actions like mouse hover, mouse click, key press, etc. Handling these events are similar to handling events in DOM elements. But there are some syntactical differences like: Events are named using camel case instead of just using the lowercase. Events are passed as functions instead of strings. The event argument contains a set of properties, which are specific to an event. Each event type contains its own properties and behavior which can be accessed via its event handler only." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What are synthetic events in React?", 
+    a: "Synthetic events are the objects which act as a cross-browser wrapper around the browser’s native event. They combine the behavior of different browsers into one API. This is done to make sure that the events show consistent properties across different browsers." 
+  },
+  { 
+    tags: ["react"], 
+    q: "List some of the cases when you should use Refs.", 
+    a: "Following are the cases when refs should be used: When you need to manage focus, select text or media playback. To trigger imperative animations. Integrate with third-party DOM librariesents or to add methods to the components." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What are Pure Components?", 
+    a: "Pure components are the simplest and fastest components which can be written. They can replace any component which only has a render(). These components enhance the simplicity of the code and performance of the application." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What is the significance of keys in React?", 
+    a: "Keys are used for identifying unique Virtual DOM Elements with their corresponding data driving the UI. They help React to optimize the rendering by recycling all the existing elements in the DOM. These keys must be a unique number or string, using which React just reorders the elements instead of re-rendering them. This leads to increase in application’s performance." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What is Redux?", 
+    a: "Redux is one of the hottest libraries for front-end development in today’s marketplace. It is a predictable state container for JavaScript applications and is used for the entire applications state management. Applications developed with Redux are easy to test and can run in different environments showing consistent behavior." 
+  },
+  { 
+    tags: ["react"], 
+    q: "What is React Router?", 
+    a: "React Router is a powerful routing library built on top of React, which helps in adding new screens and flows to the application. This keeps the URL in sync with data that’s being displayed on the web page. It maintains a standardized structure and behavior and is used for developing single page web applications. React Router has a simple API." 
+  },
+  { 
+    tags: ["react"], 
+    q: "List down the advantages of React Router.", 
+    a: "Few advantages are: Just like how React is based on components, in React Router v4, the API is ‘All About Components’. A Router can be visualized as a single root component (<BrowserRouter>) in which we enclose the specific child routes (<route>). No need to manually set History value: In React Router v4, all we need to do is wrap our routes within the <BrowserRouter> component. The packages are split: Three packages one each for Web, Native and Core. This supports the compact size of our application. It is easy to switch over based on a similar coding style." 
   },
 ];
