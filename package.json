@@ -1,7 +1,7 @@
 {
   "name": "ace_test2",
   "version": "1.0.0",
-  "description": "",
+  "description": "The user can utilize ACE to prepare them for their Web Development interview. They have the ability to create an account & sign into their account. Once logged in, the user will be displayed with different sections of flashcards. The user can then click on which flashcard they want to review which then displays the question on a card that you can flip over for the answer. We also gave the option for the user to take a quiz when they’re ready which combines a randomly selected set of cards from all the flashcards.",
   "main": "server.js",
   "dependencies": {
     "axios": "^0.19.2",
@@ -27,5 +27,14 @@
     "seed": "node db/seed.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vega2020/ace-flashcards.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Vega2020/ace-flashcards/issues"
+  },
+  "homepage": "https://github.com/Vega2020/ace-flashcards#readme"
 }
