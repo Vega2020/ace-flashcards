@@ -3,9 +3,11 @@ const Schema = mongoose.Schema;
 
 // create a mongoose schema for our card
 const CardSchema = new Schema({
-  tags: [],
+  tags: String,
   q: String,
   a: String,
+}, {
+  collection: 'cards'
 });
 
 module.exports = mongoose.model("Card", CardSchema);
