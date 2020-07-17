@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-//import "./style.css";
+import "./style.css";
 
 import CardRender from "../cardRender";
 import CardCategory from "../cardCategory";
@@ -55,6 +55,7 @@ const exampleCategories = [
 
 function CardFrame(props)
 {
+  //change this to an object? One key for deck, one for card. Probably need to spread to update count.
   const [card, setCard] = useState(-1);
   const cardMax = exampleCards.length - 1;
   
