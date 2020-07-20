@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+// Can't import from outside of src directory! How to get around this?
+//import router from '../../../../routes/routes'
+
 export default class Creator extends Component {
 
     constructor(props) {
@@ -11,36 +14,40 @@ export default class Creator extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
+            tags: '',
             q: '',
             a: ''
         }
     }
 
     onChangeCardQ(e) {
-        this.setState({ name: e.target.value })
+        this.setState({ q: e.target.value });
+        console.log(e.target.value)
     }
 
     onChangeCardA(e) {
-        this.setState({ email: e.target.value })
+        this.setState({ a: e.target.value });
+        console.log(e.target.value)
     }
 
     onSubmit(e) {
         e.preventDefault()
 
         const userObject = {
-            name: this.state.q,
-            email: this.state.a
+            tags: this.state.tags,
+            q: this.state.q,
+            a: this.state.a
         };
 
         // this .post probably needs to be routed somewhere else
-        axios.post('http://localhost:4000/users/create', userObject)
+        axios.post("mongodb://localhost/aceCardsDB", userObject)
             .then((res) => {
                 console.log(res.data)
             }).catch((error) => {
                 console.log(error)
             });
 
-        this.setState({ q: '', a: '' })
+        this.setState({ tag: '', q: '', a: '' })
     }
 
 

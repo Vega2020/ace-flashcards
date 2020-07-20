@@ -2,6 +2,7 @@ import React from "react";
 import app from "../../firebase";
 import CardFrame from "../cardFrame";
 import { Navbar, Form, Button, Nav, FormControl } from "react-bootstrap";
+import Creator from "../Creator"
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <div>
         <CardFrame />
       </div>
+      <div><Creator /></div>
     </>
   );
 };
