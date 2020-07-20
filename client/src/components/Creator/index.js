@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-// Can't import from outside of src directory! How to get around this?
-//import router from '../../../../routes/routes'
-
 export default class Creator extends Component {
 
     constructor(props) {
@@ -39,17 +36,12 @@ export default class Creator extends Component {
             a: this.state.a
         };
 
-        // this .post probably needs to be routed somewhere else
-        axios.post("mongodb://localhost/aceCardsDB", userObject)
-            .then((res) => {
-                console.log(res.data)
-            }).catch((error) => {
-                console.log(error)
-            });
+        //send to routes file here?
+
+        //Make sure routes aren't being duplicated (e.g. two "/submit" routes in different files will cause a problem when the browser tries to load both.)
 
         this.setState({ tag: '', q: '', a: '' })
     }
-
 
     render() {
         return (
@@ -57,11 +49,11 @@ export default class Creator extends Component {
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Enter question</label>
-                        <input type="text" value={this.state.name} onChange={this.onChangeCardQ} className="form-control" />
+                        <input type="text" value={this.state.q} onChange={this.onChangeCardQ} className="form-control" />
                     </div>
                     <div className="form-group">
                         <label>Enter answer</label>
-                        <input type="text" value={this.state.email} onChange={this.onChangeCardA} className="form-control" />
+                        <input type="text" value={this.state.a} onChange={this.onChangeCardA} className="form-control" />
                     </div>
                     <div className="form-group">
                         <input type="submit" value="Create Card" className="btn btn-success btn-block" />
