@@ -58,8 +58,9 @@ app.get("/find/:id", (req, res) => {
   );
 });
 
+// This looks like the post method to submit user created cards - it just needs to be connected to our mongo database correctly and then have a cutton to trigger it. This will all be part of the Creator component.
 app.post("/update/:id", (req, res) => {
-  db.htmlCards.update(
+  db.cards.update(
     {
       _id: mongojs.ObjectId(req.params.id),
     },
