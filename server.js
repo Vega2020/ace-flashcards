@@ -4,6 +4,9 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// import the routes file:
+app.use(require("./routes/routes"));
+
 // require mongoose connection
 require("./db");
 
@@ -21,27 +24,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "./public/index.html"));
 });
 
-app.post("/submit", (req, res) => {
-  console.log(req.body);
-
-  db.htmlCards.insert(req.body, (error, data) => {
-    if (error) {
-      res.send(error);
-    } else {
-      res.send(data);
-    }
-  });
-});
-
-app.get("/all", (req, res) => {
-  db.htmlCards.find({}, (error, data) => {
-    if (error) {
-      res.send(error);
-    } else {
-      res.json(data);
-    }
-  });
-});
+// All of these calls/routes need to be moved to the routes file and refactored into mongoose format from mongojs
 
 app.get("/find/:id", (req, res) => {
   db.htmlCards.findOne(
