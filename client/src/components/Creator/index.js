@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./style.css"
+import { Form } from "react-bootstrap";
 
 export default class Creator extends Component {
 
@@ -46,20 +48,22 @@ export default class Creator extends Component {
 
     render() {
         return (
-            <div className="wrapper">
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Enter question</label>
+            <div className="bgImg text-center">
+            <div className="bg-dark rounded p-3 formContainer">
+                <Form className="text-center" onSubmit={this.onSubmit}>
+                    <div className="form-group formContainer">
+                        <label className="text-light">Enter question</label>
                         <input type="text" value={this.state.q} onChange={this.onChangeCardQ} className="form-control" />
                     </div>
-                    <div className="form-group">
-                        <label>Enter answer</label>
+                    <div className="form-group formContainer">
+                        <label className="text-light">Enter answer</label>
                         <input type="text" value={this.state.a} onChange={this.onChangeCardA} className="form-control" />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group formContainer">
                         <input type="submit" value="Create Card" className="btn btn-success btn-block" />
                     </div>
-                </form>
+                </Form>
+            </div>
             </div>
         )
     }

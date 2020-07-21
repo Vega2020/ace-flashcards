@@ -23,7 +23,7 @@ const Home = () => {
         <CardFrame />
       </div>
       <div><Creator /></div>
-      <div><Quiz /></div>
+      {/* <div><Quiz /></div> */}
     </>
   );
 };
