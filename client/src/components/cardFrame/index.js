@@ -3,10 +3,11 @@ import "./style.css";
 
 import CardRender from "../cardRender";
 import CardCategory from "../cardCategory";
-import axios from "axios";
 
-const axiosCall = axios.get("/all");
-console.log(axiosCall);
+// import axios from "axios";
+// const axiosCall = axios.get("/all");
+// console.log(axiosCall);
+// adding these lines and then changing all instances of "exampleCardSet" to "axiosCall" was my first attempt - didn't compile that way.
 
 const exampleCardSet = [
     {
