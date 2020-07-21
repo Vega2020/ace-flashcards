@@ -5,6 +5,7 @@ import { Navbar,  Nav } from "react-bootstrap";
 import Creator from "../Creator"
 import Quiz from "../Quiz/Quiz"
 
+
 const Home = () => {
   return (
     <>
