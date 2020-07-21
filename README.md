@@ -15,7 +15,7 @@ Future Development
 * HTML
 * Bootstrap/CSS
 * JavaScript
-* JQuery
+* jQuery
 * Node
 * Express
 * Firebase
@@ -24,7 +24,7 @@ Future Development
 * React Router
 
 ## User Story:
-As a USER I WANT a secure place to study for my web development interview SO THAT I feel prepared to start job searching. 
+As a USER I WANT a secure place to study SO THAT I feel prepared to ACE my interviews. 
 
 ## License:
 © 2020 Open-faced Flashcard Co. All Rights Reserved.
@@ -37,6 +37,14 @@ Logan Lake, Jeremy Flowers, James Nowak, & Skye Bluth
 ## Video:
 
 ## Challenges:
+* Getting routes working
+* Version management
+* Syncing with Github as a group
+
+## Positives:
+* Went smooth this time splitting up technical tasks in a way that we were able to work separately without stepping on eachothers toes.
+* 
+* 
 
 ## Future Development:
 * The user can create their own cards for the flashcards

@@ -17,9 +17,7 @@ const Home = () => {
           <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
         </Nav>
         
-      </Navbar>
-      <h1>Home</h1>
-      
+      </Navbar>      
       <div>
         <CardFrame />
       </div>
