@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ".style.css";
 
 class Cardmaker extends React.Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class Cardmaker extends React.Component {
                 Question:
                 <textarea value={this.state.value} onChange= {this.handleChange} />
             </label>
-            <input type="submit" value="Submit" />
+            <input className="secondary" type="submit" value="Submit" />
             </form>
         );
     }
