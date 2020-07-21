@@ -4,6 +4,10 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// These have to be called in above the routes! What these do is look at the data coming in and parse it out. If the route hits before the parse happens, it returns as undefined.
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // import the routes file:
 app.use(require("./routes/routes"));
 
@@ -12,8 +16,6 @@ require("./db");
 
 app.use(logger("dev"));
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 app.use(express.static("public"));
 

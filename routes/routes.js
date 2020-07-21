@@ -5,9 +5,20 @@ let mongoose = require('mongoose'),
 // Note: Most of the routes below seem to already exist in our server file (all routes need to be moved from server file to this one)
 
 let Card = require('../models/Card');
+let Quiz = require('../models/Card');
 
 router.route('/').get((req, res) => {
     Card.find((error, data) => {
+        if (error) {
+            return next(error)
+        } else {
+            res.json(data)
+        }
+    })
+})
+
+router.route('Quiz').get((req, res) => {
+    Quiz.find((error, data) => {
         if (error) {
             return next(error)
         } else {
@@ -53,10 +64,9 @@ router.route('/delete/:id').delete((req, res, next) => {
     })
 })
 
-router.route()
-
 router.route('/create').post((req, res, next) => {
     Card.create(req.body, (error, data) => {
+        console.log(req.body);
         if (error) {
             return next(error)
         } else {
@@ -83,7 +93,7 @@ router.post("/submit", (req, res) => {
   // refactor this next:
 router.get("/all", (req, res) => {
 
-    await Card.find({}, (error, data) => {
+    Card.find({}, (error, data) => {
       if (error) {
         res.send(error);
       } else {
@@ -91,6 +101,8 @@ router.get("/all", (req, res) => {
       }
     });
   });
+
+
 
 
 module.exports = router;
