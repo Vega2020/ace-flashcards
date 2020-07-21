@@ -37,6 +37,7 @@ export default class Creator extends Component {
         };
 
         //send to routes file here?
+        axios.post("/create", userObject);
 
         //Make sure routes aren't being duplicated (e.g. two "/submit" routes in different files will cause a problem when the browser tries to load both.)
 
