@@ -3,6 +3,7 @@ import QuestionManager from './QuestionManager'
 import Quiz from './Quiz'
 import Start from './Start'
 import QuizData from './QuizData'
+import axios from 'axios';
 
 
 
@@ -23,14 +24,16 @@ export class Game extends Component {
 
     //Query the database to count the number of questions available
     componentDidMount(){
-        let count = 0;
-        QuizData.questions.each((item) => count = count+1)
-        .then(() => {
-            this.setState({numberOfQuestions: count})
-        });
-        this.setState({
-            username: this.props.username
-        })
+        axios.get("/Quiz");
+
+        // let count = 0;
+        // aceCardsDB.questions.each((item) => count = count+1)
+        // .then(() => {
+        //     this.setState({numberOfQuestions: count})
+        // });
+        // this.setState({
+        //     username: this.props.username
+        // })
     }
 
     //User clicked on Question Manager button
@@ -48,7 +51,8 @@ export class Game extends Component {
         else{
           this.setState({
               gotoQuiz: true
-          })
+          });
+          axios.get("/Quiz");
         }
     }
 

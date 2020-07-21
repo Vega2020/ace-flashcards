@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Scoresheet from "./Scoresheet";
 import "./style.css";
-import db from "./QuizData";
 
 export class Quiz extends Component {
 
@@ -28,17 +27,17 @@ export class Quiz extends Component {
   }
   
   //Reads the question from IndexedDB and loads them into the questionBank
-  loadQuestions = () => {
-      let arr = [];
-      db.questions.each((item) => arr.push(item))
-      .then(() => this.setState({questionBank: arr}));
-  }
+//   loadQuestions = () => {
+//       let arr = [];
+//       db.quizQuestions.each((item) => arr.push(item))
+//       .then(() => this.setState({questionBank: arr}));
+//   }
 
   //Load the question from indexedDB when component mounts
-  componentDidMount(){
-      this.loadQuestions()
+//   componentDidMount(){
+//       this.loadQuestions()
       
-  }
+//   }
 
   //Increment the currentIndex when next button is clicked
   nextQuestionHander = () => {
