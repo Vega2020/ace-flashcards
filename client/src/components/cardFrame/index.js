@@ -28,7 +28,7 @@ function CardFrame(props) {
 
   //Filter to pick out and set a working deck by tag.
   const cardSet = cards.filter((cardToCheck) => {
-    return cardToCheck.tag === deck;
+    return cardToCheck.tags === deck;
   });
 
   //Little variable to measure the resulting array length, to prevent overshooting.
@@ -54,10 +54,7 @@ function CardFrame(props) {
     //As such, render the menu.
 
     //Since sets don't allow duplicate entries, feeding the tag of each item into a set gives us a list of tags.
-    console.log("Cards are:")
-    console.log(cards);
-    let arrayOfTags = uniq(cards.map((individualCard) => individualCard.tags));
-    console.log(arrayOfTags);
+    let arrayOfTags = uniq(cards.map((category) => category.tags));
     //Then we need to have it return a button for each category.
     return (
       <>
