@@ -54,10 +54,10 @@ function CardFrame(props) {
     //As such, render the menu.
 
     //Since sets don't allow duplicate entries, feeding the tag of each item into a set gives us a list of tags.
-    let setOfTags = new Set(cards.map((category) => category.tag));
-    //We turn it back into an array, so we can iterate over it more easily.
-    // let arrayOfTags = Array.from(setOfTags);
-    let arrayOfTags = uniq(cards.map((category) => category.tag));
+    console.log("Cards are:")
+    console.log(cards);
+    let arrayOfTags = uniq(cards.map((individualCard) => individualCard.tags));
+    console.log(arrayOfTags);
     //Then we need to have it return a button for each category.
     return (
       <>
