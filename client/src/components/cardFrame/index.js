@@ -3,6 +3,10 @@ import "./style.css";
 
 import CardRender from "../cardRender";
 import CardCategory from "../cardCategory";
+import axios from "axios";
+
+const axiosCall = axios.get("/all");
+console.log(axiosCall);
 
 const exampleCardSet = [
     {

@@ -11,7 +11,7 @@ export default class Creator extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            tags: '',
+            tags: "user-created",
             q: '',
             a: ''
         }
@@ -41,7 +41,7 @@ export default class Creator extends Component {
 
         //Make sure routes aren't being duplicated (e.g. two "/submit" routes in different files will cause a problem when the browser tries to load both.)
 
-        this.setState({ tag: '', q: '', a: '' })
+        this.setState({ q: '', a: '' })
     }
 
     render() {
