@@ -1,0 +1,123 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+.header{
+  width: 100%;
+  height: 40px;
+  background-color: #acb8ec;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.header span{
+  font-weight: bold;
+}
+
+.container {
+    width: 70%;
+    height: 470px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin:auto;
+    margin-bottom: 20px;
+  }
+
+  .small {
+    height: 400px !important;
+  }
+
+
+  .home{
+    text-align: center;
+  }
+
+  .container div span{
+    color: rgb(11, 88, 88);
+    margin: 30px;
+    font-weight: bold;
+  }
+
+  .container button{
+    margin-top: 10px;
+  }
+
+
+  .scoresheet{
+    text-align: center;
+    background-color: rgb(232, 226, 238);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .options {
+      padding-top: 1%;
+      padding-left: 5px;
+      background-color: khaki;
+      width: 200px;
+      border: 1px;
+      border-radius: 5px;
+      height: 35px;
+      box-shadow: 5px 5px 5px #888888;
+      margin: 10px;
+      vertical-align: middle;
+      font-size: 18px;
+  }
+
+  .retakeButton{
+    margin-top: 10px;
+    margin:auto;
+    display: block;
+    width: 120px;
+    height:40px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(228, 214, 28);
+    font-weight: bold;
+  }
+
+  .button{
+    margin-top: 5px;
+    margin:auto;
+    display: block;
+    width: 120px;
+    height:40px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgb(228, 214, 28);
+    font-weight: bold;
+  }
+
+  .green {
+    background-color: green!important;
+    color: #FFF;
+  }
+
+  .questionItem{
+    background-color: #ffe4b3;
+    box-sizing: border-box;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin:auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width:70%;
+  }
+
+  .questionItem span{
+    font-weight: bold;
+    margin-right: 10px;
+    width:70%;
+  }

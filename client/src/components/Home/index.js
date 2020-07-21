@@ -1,8 +1,9 @@
 import React from "react";
 import app from "../../firebase";
 import CardFrame from "../cardFrame";
-import { Navbar, Form, Button, Nav, FormControl } from "react-bootstrap";
+import { Navbar,  Nav } from "react-bootstrap";
 import Creator from "../Creator"
+import Quiz from "../Quiz/Quiz"
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <CardFrame />
       </div>
       <div><Creator /></div>
+      <div><Quiz /></div>
     </>
   );
 };
