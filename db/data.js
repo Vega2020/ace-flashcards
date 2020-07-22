@@ -602,7 +602,7 @@ module.exports = [
         },
       {tags: "react", 
     q: "List down the advantages of React Router.", 
-    a: "Few advantages are: Just like how React is based on components, in React Router v4, the API is ‘All About Components’. A Router can be visualized as a single root component (<BrowserRouter>) in which we enclose the specific child routes (<route>). No need to manually set History value: In React Router v4, all we need to do is wrap our routes within the <BrowserRouter> component. The packages are split: Three packages one each for Web, Native and Core. This supports the compact size of our application. It is easy to switch over based on a similar coding style." 
+    a: "Few advantages are: Just like how React is based on components, in React Router v4, the API is ‘All About Components’. A Router can be visualized as a single root component (<BrowserRouter>) in which we enclose the specific child routes (<route>). No need to manually set History value: In React Router v4, all we need to do is wrap our routes within the <BrowserRouter> component." 
   },
   { 
     tags: "react", 

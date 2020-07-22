@@ -4,12 +4,13 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://project3DB:password2020@ds259586.mlab.com:59586/heroku_hxxsxbvc";
-
-Mongoose.connect(MONGODB_URI);
 // These have to be called in above the routes! What these do is look at the data coming in and parse it out. If the route hits before the parse happens, it returns as undefined.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://project3DB:password2020@ds259586.mlab.com:59586/heroku_hxxsxbvc";
+
+// Mongoose.connect(MONGODB_URI);
 
 // import the routes file:
 app.use(require("./routes/routes"));
