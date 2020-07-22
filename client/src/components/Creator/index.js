@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./style.css"
+import { Navbar,  Nav } from "react-bootstrap";
+import app from "../../firebase";
 import { Form } from "react-bootstrap";
+
 
 export default class Creator extends Component {
 
@@ -48,6 +51,18 @@ export default class Creator extends Component {
 
     render() {
         return (
+            <>
+            <Navbar className="bg-dark" variant="dark">
+        <Navbar.Brand href="/home">Ace</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/signup">Sign Up</Nav.Link>
+          <Nav.Link href="/quiz">Quiz Me</Nav.Link>
+          <Nav.Link href="/creator">Card Creator</Nav.Link>
+          <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
+        </Nav>
+        
+      </Navbar>   
             <div className="bgImg text-center">
             <div className="bg-dark rounded p-3 formContainer">
                 <Form className="text-center" onSubmit={this.onSubmit}>
@@ -65,6 +80,7 @@ export default class Creator extends Component {
                 </Form>
             </div>
             </div>
+            </>
         )
     }
 }

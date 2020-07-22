@@ -42,10 +42,10 @@ function CardFrame(props) {
           <CardRender front={cards[cardIndex].q} back={cards[cardIndex].a} />
         </div>
         <div>
-          <button onClick={() => setCardIndex(cardIndex - 1)}>Prev</button>
+          <button className="bg-dark text-light" onClick={() => setCardIndex(cardIndex - 1)}>Prev</button>
         </div>
         <div>
-          <button onClick={() => setCardIndex(cardIndex + 1)}>Next</button>
+          <button className="bg-dark text-light" onClick={() => setCardIndex(cardIndex + 1)}>Next</button>
         </div>
       </div>
     );
@@ -58,7 +58,7 @@ function CardFrame(props) {
     //Then we need to have it return a button for each category.
     return (
       <>
-        <div>
+        <div className="bg-dark">
           {arrayOfTags.map((category) => (
             <CardCategory name={category} startDeck={startDeck} />
           ))}

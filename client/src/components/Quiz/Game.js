@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import QuestionManager from './QuestionManager'
 import Quiz from './Quiz'
 import Start from './Start'
+import { Navbar,  Nav } from "react-bootstrap";
+import app from "../../firebase";
 import QuizData from './QuizData'
 import axios from 'axios';
 
@@ -80,6 +82,18 @@ export class Game extends Component {
         }
 
         return (
+            <>
+            <Navbar className="bg-dark" variant="dark">
+        <Navbar.Brand href="/home">Ace</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/signup">Sign Up</Nav.Link>
+          <Nav.Link href="/quiz">Quiz Me</Nav.Link>
+          <Nav.Link href="/creator">Card Creator</Nav.Link>
+          <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
+        </Nav>
+        
+      </Navbar>  
             <div>
                 <div className="container">
                     <hr />
@@ -95,6 +109,7 @@ export class Game extends Component {
                     <button onClick={()=>{this.setState({username:'', goBack:true})}}>Exit</button>
                 </div>
             </div>
+            </>
         )
     }
 }

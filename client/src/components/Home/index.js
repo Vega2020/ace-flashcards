@@ -9,7 +9,7 @@ import Quiz from "../Quiz/Quiz"
 const Home = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar className="bg-dark" variant="dark">
         <Navbar.Brand href="/home">Ace</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/login">Login</Nav.Link>
