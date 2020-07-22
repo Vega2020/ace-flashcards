@@ -31,7 +31,7 @@ function Scoresheet(props) {
                 <div className="">
                     <h1 className="text-center text-light">Quiz Successfully Completed</h1><br />
                     <h3 className="text-center text-light">Your score is {props.score}</h3>
-                    <h4 className="text-center text-light">That is {props.score / props.totalQuestions * 100}% </h4>
+                    {/* <h4 className="text-center text-light">That is {props.score / props.totalQuestions * 100}% </h4> */}
                 </div>                
                 {/* <Button variant="secondary" className="retakeButton" onClick={() => setRestart(true)}>Restart Quiz</Button>     */}
                 <Button variant="secondary" onClick={() => setGoHome(true)}>Restart Quiz</Button>     
