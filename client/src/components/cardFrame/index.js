@@ -36,7 +36,7 @@ function CardFrame(props) {
   //This checks to see if the card count is within the range of the deck. If it is, we render the card and navigation.
   if (cardIndex <= cardMax && cardIndex >= 0) {
     return (
-      <div>
+      <div className="bgImg text-center">
         <div>
           <CardRender front={cardSet[cardIndex].q} back={cardSet[cardIndex].a} />
         </div>
@@ -54,10 +54,11 @@ function CardFrame(props) {
 
     //Since sets don't allow duplicate entries, feeding the tag of each item into a set gives us a list of tags.
     let arrayOfTags = uniq(cards.map((category) => category.tags));
+    console.log(arrayOfTags);
     //Then we need to have it return a button for each category.
     return (
       <>
-        <div className="bg-dark">
+        <div className="bg-dark bgImg text-center">
           {arrayOfTags.map((category) => (
             <CardCategory name={category} startDeck={startDeck} />
           ))}
