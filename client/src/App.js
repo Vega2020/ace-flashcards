@@ -7,6 +7,8 @@ import SignUp from "./components/SignUp";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
 
+import Creator from "./components/Creator";
+
 //This and the corresponding route are for testing. Probably remove them once the component is accessible normally.
 import CardFrame from "./components/cardFrame";
 
@@ -22,6 +24,9 @@ const App = () => {
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/cardtest" component={CardFrame} />
+
+          <Route exact path="/creator" component={Creator} />
+
         </div>
       </Router>
     </AuthProvider>

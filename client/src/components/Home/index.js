@@ -15,6 +15,7 @@ const Home = () => {
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="/quiz">Quiz Me</Nav.Link>
+          <Nav.Link href="/creator">Card Creator</Nav.Link>
           <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
         </Nav>
         
@@ -22,7 +23,7 @@ const Home = () => {
       <div>
         <CardFrame />
       </div>
-      <div><Creator /></div>
+      {/* <div><Creator /></div> */}
       {/* <div><Quiz /></div> */}
     </>
   );
