@@ -2,8 +2,8 @@ import React from "react";
 import app from "../../firebase";
 import CardFrame from "../cardFrame";
 import { Navbar,  Nav } from "react-bootstrap";
-import Creator from "../Creator"
-import Quiz from "../Quiz/Quiz"
+//import Creator from "../Creator"
+//import Quiz from "../Quiz/Quiz"
 
 
 const Home = () => {
