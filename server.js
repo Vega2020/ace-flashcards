@@ -4,6 +4,9 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://project3DB:password2020@ds259586.mlab.com:59586/heroku_hxxsxbvc";
+
+Mongoose.connect(MONGODB_URI);
 // These have to be called in above the routes! What these do is look at the data coming in and parse it out. If the route hits before the parse happens, it returns as undefined.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -20,7 +23,8 @@ app.use(logger("dev"));
 app.use(express.static("public"));
 
 // TODO - All routes refering to db will break - need to fix
-let db = require('./db/index')
+let db = require('./db/index');
+const { Mongoose } = require("mongoose");
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "./public/index.html"));
