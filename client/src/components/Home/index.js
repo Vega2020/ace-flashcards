@@ -1,4 +1,5 @@
 import React from "react";
+import aceLogo from "../../Images/aceLogo.png";
 import app from "../../firebase";
 import CardFrame from "../cardFrame";
 import { Navbar,  Nav } from "react-bootstrap";
@@ -10,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Navbar className="bg-dark" variant="dark">
-        <Navbar.Brand href="/">Ace</Navbar.Brand>
+        <Navbar.Brand href="/"><img src={aceLogo} height="50px"></img></Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/quiz">Quiz Me</Nav.Link>
           <Nav.Link href="/creator">Card Creator</Nav.Link>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar,  Nav, Button } from "react-bootstrap";
+import aceLogo from "../../Images/aceLogo.png";
 import app from "../../firebase";
 import Scoresheet from "./Scoresheet";
 
@@ -108,18 +109,6 @@ export class Quiz extends Component {
       {
         return (
         <>    
-                {/* Navbar Component */}
-                <Navbar className="bg-dark" variant="dark">
-                    <Navbar.Brand href="/">Ace</Navbar.Brand>
-                    <Nav className="mr-auto">
-                        <Nav.Link href="/login">Login</Nav.Link>
-                        <Nav.Link href="/signup">Sign Up</Nav.Link>
-                        <Nav.Link href="/quiz">Quiz Me</Nav.Link>
-                        <Nav.Link href="/creator">Card Creator</Nav.Link>
-                        <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
-                    </Nav>
-                </Navbar>
-                {/*End of NavBar component */} 
 
             <div className="container">                    
                 <h2> {currentQuestion.question}</h2>
@@ -145,17 +134,17 @@ export class Quiz extends Component {
                 </fieldset> 
 
                 <div>
-                    <button onClick={this.checkAnswer} disabled={this.state.disabledCheck}>Check Answer</button>   
+                    <Button onClick={this.checkAnswer} disabled={this.state.disabledCheck}>Check Answer</Button>   
                     <span>Your answer: {userAnswer} </span>
                     <span>   Correct answer: {correctAnswer}</span>
                 </div>
                 
-                <button className="button" onClick={this.nextQuestionHander} disabled = {this.state.disabled}>Next</button>                          
+                <Button className="button" onClick={this.nextQuestionHander} disabled = {this.state.disabled}>Next</Button>                          
             </div >
             
             <div> 
                 <center>
-                    <button onClick={()=>{this.setState({endQuiz:true})}} >End Quiz Now</button>
+                    <Button onClick={()=>{this.setState({endQuiz:true})}} >End Quiz Now</Button>
                 </center>
                 <br>
                 </br>
@@ -167,17 +156,16 @@ export class Quiz extends Component {
     { //Quiz has ended so now load the Scoresheet component
         return (
         <>    
-        <Navbar className="bg-dark" variant="dark">
-                    <Navbar.Brand href="/">Ace</Navbar.Brand>
+             {/* Navbar Component */}
+             <Navbar className="bg-dark" variant="dark">
+                    <Navbar.Brand href="/"><img src={aceLogo} height="50px"></img></Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/login">Login</Nav.Link>
-                        <Nav.Link href="/signup">Sign Up</Nav.Link>
                         <Nav.Link href="/quiz">Quiz Me</Nav.Link>
                         <Nav.Link href="/creator">Card Creator</Nav.Link>
                         <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
                     </Nav>
-                </Navbar> 
-
+                </Navbar>
+                {/*End of NavBar component */} 
               <div >
                   <Scoresheet username={this.props.username} score={score} totalQuestions={questionBank.length} />
                   <br />               

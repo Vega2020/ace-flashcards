@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import QuestionManager from './QuestionManager'
 import Quiz from './Quiz'
 import Start from './Start'
-import { Navbar,  Nav } from "react-bootstrap";
+import { Navbar,  Nav, Button } from "react-bootstrap";
 import app from "../../firebase";
 //import QuizData from './QuizData'
 import axios from 'axios';
@@ -86,27 +86,25 @@ export class Game extends Component {
             <Navbar className="bg-dark" variant="dark">
         <Navbar.Brand href="/home">Ace</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="/quiz">Quiz Me</Nav.Link>
           <Nav.Link href="/creator">Card Creator</Nav.Link>
           <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
         </Nav>
-        
+
       </Navbar>  
-            <div>
-                <div className="container">
+            <div className="bgImg text-center">
+                <div className="bg-dark rounded p-3 formContainer text-center text-light">
                     <hr />
                     <center>
-                        <h1>Quiz Dashboard</h1>
-                        <h4>Number of questions in the database must be one or more before you can starte the quiz</h4>
-                        <h5>To add a question, please click on the Manage Questions button</h5>
+                        <h1 className="text-center text-light">Quiz Dashboard</h1>
+                        <h4  className="text-center text-light">Number of questions in the database must be one or more before you can starte the quiz</h4>
+                        <h5  className="text-center text-light">To add a question, please click on the Manage Questions button</h5>
                     </center>
                     <hr />
                     Number of Question: {this.state.numberOfQuestions}<br />
-                    <button className="button" onClick={this.manageQuestions}>Manage Questions</button>
-                    <button className="button green" onClick={this.startQuiz}>Start Quiz</button> <br />
-                    <button onClick={()=>{this.setState({username:'', goBack:true})}}>Exit</button>
+                    <Button  size="lg" className="text-light m-5" variant="secondary" onClick={this.manageQuestions}>Manage Questions</Button>
+                    <Button  variant="secondary" className="button green" onClick={this.startQuiz}>Start Quiz</Button> <br />
+                    <Button  variant="secondary" onClick={()=>{this.setState({username:'', goBack:true})}}>Exit</Button>
                 </div>
             </div>
             </>
