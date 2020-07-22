@@ -21,7 +21,6 @@ function CardFrame(props) {
   // TLDR; when the component is rendered on the page
   useEffect(() => {
     Axios.get("/all").then(function ({ data }) {
-      console.log(data);
       setCards(data);
     });
   }, []);
@@ -59,9 +58,11 @@ function CardFrame(props) {
     return (
       <>
         <div className="bg-dark bgImg text-center">
+          <div className="bg-dark rounded p-3 formContainer">
           {arrayOfTags.map((category) => (
             <CardCategory name={category} startDeck={startDeck} />
           ))}
+        </div>
         </div>
       </>
     );
