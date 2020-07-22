@@ -4,7 +4,7 @@ import Quiz from './Quiz'
 import Start from './Start'
 import { Navbar,  Nav } from "react-bootstrap";
 import app from "../../firebase";
-import QuizData from './QuizData'
+//import QuizData from './QuizData'
 import axios from 'axios';
 
 
