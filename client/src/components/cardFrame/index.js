@@ -33,13 +33,12 @@ function CardFrame(props) {
 
   //Little variable to measure the resulting array length, to prevent overshooting.
   const cardMax = cardSet.length - 1;
-
   //This checks to see if the card count is within the range of the deck. If it is, we render the card and navigation.
   if (cardIndex <= cardMax && cardIndex >= 0) {
     return (
       <div>
         <div>
-          <CardRender front={cards[cardIndex].q} back={cards[cardIndex].a} />
+          <CardRender front={cardSet[cardIndex].q} back={cardSet[cardIndex].a} />
         </div>
         <div>
           <button className="bg-dark text-light" onClick={() => setCardIndex(cardIndex - 1)}>Prev</button>
@@ -72,8 +71,7 @@ function CardFrame(props) {
     console.log("Starting a deck:", deckName);
     setCardIndex(0);
     setDeck(deckName);
-    console.log("Deck is now:");
-    console.log(deck);
+    console.log("Deck set");
   }
 }
 
