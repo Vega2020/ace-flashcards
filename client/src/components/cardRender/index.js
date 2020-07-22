@@ -11,8 +11,8 @@ const cardRender = (props) => {
             <h1 className="text-light">{props.front}</h1>
             <p className="instruction text-light">Click and Hold for Answer</p>
           </div>
-          <div className="flip-card-back bg-dark">
-            <h1 className="text-light">{props.back}</h1>
+          <div className="flip-card-back bg-dark text-small">
+            <h1 className="text-light text-small">{props.back}</h1>
           </div>
         </div>
       </div>

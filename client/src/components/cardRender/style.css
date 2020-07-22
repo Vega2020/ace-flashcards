@@ -39,12 +39,15 @@
   
   /* Style the back side */
   .flip-card-back {
-    background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
+    font-size: 10px;
   }
 
   /* For adding a class */
   .instruction{
       font-size: 8px;
+  }
+  .text-small {
+    font-size: small;
   }
