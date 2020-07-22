@@ -396,16 +396,6 @@
 //     a: "No, jQuery HTML only works for HTML documents. It doesn't work for XML documents." 
 //   },
 //   { 
-//     tags: ["jquery"], 
-//     q: "Explain the difference between $(this) and this in jQuery?", 
-//     a: "$() is the jQuery constructor function, whereas this is a reference to the DOM element. To use jQuery methods, we use $(this)." 
-//   },
-//   { 
-//     tags: ["node"], 
-//     q: "What is Node.js? What is it used for?", 
-//     a: "Node.js is a run-time JavaScript environment built on top of Chrome’s V8 engine. It uses an event-driven, non-blocking I/O model. It is lightweight and so efficient. Node.js has a package ecosystem called npm. Node.js can be used to build different types of applications such as web application, real-time chat application, REST API server etc. However, it is mainly used to build network programs like web servers, similar to PHP, Java, or ASP.NET. Node.js was developed by Ryan Dahl in 2009." 
-//   },
-//   { 
 //     tags: ["node"], 
 //     q: "What is Event-driven programming?", 
 //     a: "Event-driven programming is building our application based on and respond to events. When an event occurs, like click or keypress, we are running a callback function which is registered to the element for that event."
@@ -604,7 +594,17 @@
 
 module.exports = [
   { 
-    tags: "react", 
+    { 
+          tags: "jquery", 
+          q: "Explain the difference between $(this) and this in jQuery?", 
+          a: "$() is the jQuery constructor function, whereas this is a reference to the DOM element. To use jQuery methods, we use $(this)." 
+        },
+        { 
+          tags: "node", 
+          q: "What is Node.js? What is it used for?", 
+          a: "Node.js is a run-time JavaScript environment built on top of Chrome’s V8 engine. It uses an event-driven, non-blocking I/O model. It is lightweight and so efficient. Node.js has a package ecosystem called npm. Node.js can be used to build different types of applications such as web application, real-time chat application, REST API server etc. However, it is mainly used to build network programs like web servers, similar to PHP, Java, or ASP.NET. Node.js was developed by Ryan Dahl in 2009." 
+        },
+      {tags: "react", 
     q: "List down the advantages of React Router.", 
     a: "Few advantages are: Just like how React is based on components, in React Router v4, the API is ‘All About Components’. A Router can be visualized as a single root component (<BrowserRouter>) in which we enclose the specific child routes (<route>). No need to manually set History value: In React Router v4, all we need to do is wrap our routes within the <BrowserRouter> component. The packages are split: Three packages one each for Web, Native and Core. This supports the compact size of our application. It is easy to switch over based on a similar coding style." 
   },
