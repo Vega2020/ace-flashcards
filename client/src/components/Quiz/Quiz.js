@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Scoresheet from "./Scoresheet";
+
 import "./style.css";
 
 export class Quiz extends Component {
@@ -95,7 +96,7 @@ export class Quiz extends Component {
       this.setState({disabledCheck:false})
   }
 
-  render() {       
+  render() {   
       const {currentIndex,  endQuiz, questionBank, score, userAnswer, correctAnswer} = this.state
       var currentQuestion = questionBank[currentIndex]    
 
@@ -127,7 +128,7 @@ export class Quiz extends Component {
               </div>
               </div>
           )
-      }
+        }
       else { //Quiz has ended so now load the Scoresheet component
           return (
               <div >
