@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./style.css"
+import aceLogo from "../../Images/aceLogo.png";
 import { Navbar,  Nav } from "react-bootstrap";
 import app from "../../firebase";
 import { Form } from "react-bootstrap";
@@ -53,10 +54,9 @@ export default class Creator extends Component {
         return (
             <>
             <Navbar className="bg-dark" variant="dark">
-        <Navbar.Brand href="/">Ace</Navbar.Brand>
+        <Navbar.Brand href="/"><img src={aceLogo} height="50px"></img></Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/quiz">Quiz Me</Nav.Link>
-          <Nav.Link href="/creator">Card Creator</Nav.Link>
           <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
         </Nav>
         
@@ -73,7 +73,7 @@ export default class Creator extends Component {
                         <input type="text" value={this.state.a} onChange={this.onChangeCardA} className="form-control" />
                     </div>
                     <div className="form-group formContainer">
-                        <input type="submit" value="Create Card" className="btn btn-success btn-block" />
+                        <input type="submit" value="Create Card" className="btn secondary text-light btn-block" />
                     </div>
                 </Form>
             </div>

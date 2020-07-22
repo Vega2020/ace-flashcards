@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import uniq from "lodash/uniq";
 import Axios from "axios";
-
+import { Button } from "react-bootstrap";
 import "./style.css";
 import CardRender from "../cardRender";
 import CardCategory from "../cardCategory";
@@ -41,10 +41,10 @@ function CardFrame(props) {
           <CardRender front={cardSet[cardIndex].q} back={cardSet[cardIndex].a} />
         </div>
         <div>
-          <button className="bg-dark text-light" onClick={() => setCardIndex(cardIndex - 1)}>Prev</button>
+          <Button className="bg-dark text-light" onClick={() => setCardIndex(cardIndex - 1)}>Prev</Button>
         </div>
         <div>
-          <button className="bg-dark text-light" onClick={() => setCardIndex(cardIndex + 1)}>Next</button>
+          <Button className="bg-dark text-light" onClick={() => setCardIndex(cardIndex + 1)}>Next</Button>
         </div>
       </div>
     );

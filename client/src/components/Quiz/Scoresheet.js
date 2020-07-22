@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './style.css'
+import { Button } from 'react-bootstrap';
 import Start from './Start'
 import Quiz from './Quiz'
 
@@ -25,17 +26,17 @@ function Scoresheet(props) {
         )
     }
     return (
-        <div>
-            <div className="container small">
-                <div className="scoresheet">
-                    <h1>Quiz Successfully Completed</h1><br />
-                    <h3>Your score is {props.score}</h3>
-                    <h4>That is {props.score / props.totalQuestions * 100}% </h4>
+        <div className="bgImg text-center">
+            <div className="bg-dark rounded p-3 formContainer">
+                <div className="">
+                    <h1 className="text-center text-light">Quiz Successfully Completed</h1><br />
+                    <h3 className="text-center text-light">Your score is {props.score}</h3>
+                    <h4 className="text-center text-light">That is {props.score / props.totalQuestions * 100}% </h4>
                 </div>                
-                <button className="retakeButton" onClick={() => setRestart(true)}>Restart Quiz</button>    
-                <button onClick={() => setGoHome(true)}>Exit Quiz</button>     
+                {/* <Button variant="secondary" className="retakeButton" onClick={() => setRestart(true)}>Restart Quiz</Button>     */}
+                <Button variant="secondary" onClick={() => setGoHome(true)}>Exit Quiz</Button>     
             </div>
-        </div>
+            </div>
     )
 }
 
