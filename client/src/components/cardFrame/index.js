@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import uniq from "lodash/uniq";
 import Axios from "axios";
-import { Button } from "react-bootstrap";
+import { Button, CardDeck } from "react-bootstrap";
 import "./style.css";
 import CardRender from "../cardRender";
 import CardCategory from "../cardCategory";
@@ -59,9 +59,13 @@ function CardFrame(props) {
       <>
         <div className="bg-dark bgImg text-center">
           <div className="bg-dark rounded p-3 formContainer">
+          <CardDeck>
           {arrayOfTags.map((category) => (
+            <blockquote className="blockquote mb-0 card-body">
             <CardCategory name={category} startDeck={startDeck} />
+            </blockquote>
           ))}
+          </CardDeck>
         </div>
         </div>
       </>
