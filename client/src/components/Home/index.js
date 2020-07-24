@@ -3,6 +3,7 @@ import aceLogo from "../../Images/aceLogo.png";
 import app from "../../firebase";
 import CardFrame from "../cardFrame";
 import { Navbar,  Nav } from "react-bootstrap";
+import "./style.css";
 //import Creator from "../Creator"
 //import Quiz from "../Quiz/Quiz"
 
@@ -18,8 +19,8 @@ const Home = () => {
           <Nav.Link onClick={() => app.auth().signOut()}>Sign out</Nav.Link>
         </Nav>
         
-      </Navbar>      
-      <div>
+      </Navbar>    
+      <div className="bgImg">
         <CardFrame />
       </div>
       {/* <div><Creator /></div> */}
