@@ -35,7 +35,7 @@ function CardFrame(props) {
   //This checks to see if the card count is within the range of the deck. If it is, we render the card and navigation.
   if (cardIndex <= cardMax && cardIndex >= 0) {
     return (
-      <div className="bgImg text-center">
+      <div className="spaced text-center">
         <div>
           <CardRender front={cardSet[cardIndex].q} back={cardSet[cardIndex].a} />
         </div>
@@ -55,7 +55,7 @@ function CardFrame(props) {
     //Then we need to have it return a button for each category.
     return (
       <>
-        <div className="bg-dark bgImg text-center">
+        <div className="bg-dark bgImg text-center spaced">
           <div className="bg-dark rounded p-3 formContainer">
           <CardDeck>
           {arrayOfTags.map((category) => (
