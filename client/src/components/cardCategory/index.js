@@ -7,7 +7,7 @@ import "./style.css";
 const cardCategory = (props) => {
   return (
     <>
-        <Button variant="secondary" onClick={() => props.startDeck(props.name)}>
+        <Button className="capitalize" variant="secondary" onClick={() => props.startDeck(props.name)}>
   {props.name}
 </Button>
     </>
