@@ -13,7 +13,7 @@ function Scoresheet(props) {
     if(goHome === true){
         return (
         <div>
-            <Start></Start>
+            <Start />
         </div>
         )
     }
@@ -21,7 +21,7 @@ function Scoresheet(props) {
     if(restart === true){
         return (
         <div>
-        <Quiz username={props.username}></Quiz>
+        <Quiz username={props.username} />
          </div> 
         )
     }

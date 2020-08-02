@@ -17,10 +17,12 @@ constructor(props) {
 
     //Load the question from IndexedDB
     loadQuestions = () => {
-
-        let arr = [];
-        QuizData.questions.each((item) => arr.push(item))
-        .then(() => this.setState({questionBank: arr}));
+        console.log("This is QuizData", QuizData)
+        let questionArray = QuizData.map((entry) => entry.questions);
+        this.setState({questionBank: {questionArray}});
+        //let arr = [];
+        //QuizData.questions.each((item) => arr.push(item))
+        //.then(() => this.setState({questionBank: arr}));
     }
 
     //Function to Delete Question based on the key
