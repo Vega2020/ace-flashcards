@@ -8,9 +8,9 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://project3DB:password2020@ds259586.mlab.com:59586/heroku_hxxsxbvc";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://project3DB:password2020@ds259586.mlab.com:59586/heroku_hxxsxbvc";
 
-// Mongoose.connect(MONGODB_URI);
+Mongoose.connect(MONGODB_URI);
 
 // import the routes file:
 app.use(require("./routes/routes"));
