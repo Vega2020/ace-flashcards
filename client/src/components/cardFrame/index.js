@@ -22,6 +22,7 @@ function CardFrame(props) {
   useEffect(() => {
     Axios.get("/all").then(function ({ data }) {
       setCards(data);
+      console.log(data);
     });
   }, []);
 
