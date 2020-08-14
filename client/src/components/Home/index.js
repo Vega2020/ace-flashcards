@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <Navbar className="bg-dark" variant="dark">
-        <Navbar.Brand href="/"><img src={aceLogo} height="50px"></img></Navbar.Brand>
+        <Navbar.Brand href="/"><img src={aceLogo} alt="logo" height="50px"></img></Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/quiz">Quiz Me</Nav.Link>
           <Nav.Link href="/creator">Card Creator</Nav.Link>
