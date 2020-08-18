@@ -92,8 +92,9 @@ router.post("/submit", (req, res) => {
 
   // refactor this next:
 router.get("/all", (req, res) => {
-
+    console.log("inside the /all API");
     Card.find({}, (error, data) => {
+        console.log("all", data);
       if (error) {
         res.send(error);
       } else {

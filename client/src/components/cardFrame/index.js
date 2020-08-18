@@ -21,6 +21,7 @@ function CardFrame(props) {
   // TLDR; when the component is rendered on the page
   useEffect(() => {
     Axios.get("/all").then(function ({ data }) {
+      console.log("clientside all: ", data); 
       setCards(data);
     });
   }, []);
