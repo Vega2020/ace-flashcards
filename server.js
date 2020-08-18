@@ -1,5 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
+const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -8,9 +9,16 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://project3DB:password2020@ds259586.mlab.com:59586/heroku_hxxsxbvc";
+// mongoose connection
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/aceCardsDB", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-Mongoose.connect(MONGODB_URI);
+
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://project3DB:password2020@ds259586.mlab.com:59586/heroku_hxxsxbvc";
+
+// Mongoose.connect(MONGODB_URI);
 
 // import the routes file:
 app.use(require("./routes/routes"));
@@ -25,7 +33,7 @@ app.use(express.static("public"));
 
 // TODO - All routes refering to db will break - need to fix
 let db = require('./db/index');
-const { Mongoose } = require("mongoose");
+
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "./public/index.html"));
@@ -96,6 +104,14 @@ app.delete("/clearall", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log("App running on port 3000!");
-});
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "client/build/index.html"));
+  });
+}
+
+// app.listen(PORT, () => {
+//   console.log("App running on port 3000!");
+// });
+app.listen(PORT, () => console.log("App listening on port:" + PORT));

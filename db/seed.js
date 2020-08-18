@@ -1,5 +1,12 @@
 const db = require("../models");
 const data = require("./data");
+const mongoose = require("mongoose");
+
+
+mongoose.connect(
+  process.env.MONGODB_URI ||
+  "mongodb://localhost/aceCardsDB"
+);
 
 // require mongoose connection
 require("./index");
